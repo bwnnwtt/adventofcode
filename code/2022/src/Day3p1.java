@@ -9,7 +9,7 @@ public class Day3p1 {
     public static void main(String[] args) throws Exception {
         List<Set<Character>> commonList = new ArrayList<>();
         try {
-            File myFile = new File("../inputs/day3.txt");
+            File myFile = new File("./code/2022/inputs/day3.txt");
             Scanner myReader = new Scanner(myFile);
             
             while(myReader.hasNextLine()) {

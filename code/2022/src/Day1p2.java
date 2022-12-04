@@ -7,7 +7,7 @@ public class Day1p2 {
     public static void main(String[] args) {
         List<Integer> myList = new ArrayList<>();
         try {
-            File myFile = new File("../inputs/day1");
+            File myFile = new File("./code/2022/inputs/day1.txt");
             Scanner myReader = new Scanner(myFile);
             int sum = 0;
             

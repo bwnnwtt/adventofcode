@@ -13,7 +13,7 @@ public class Day3p2 {
     Set<Character> set3 = new HashSet<>();
     
     try {
-        File myFile = new File("../inputs/day3.txt");
+        File myFile = new File("./code/2022/inputs/day3.txt");
         Scanner myReader = new Scanner(myFile);
         int j = 1;
         while(myReader.hasNextLine()) {

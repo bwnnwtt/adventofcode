@@ -7,11 +7,10 @@ public class Day2p1 {
     public static void main(String[] args) throws Exception {
         List<String> myList = new ArrayList<>();
         try {
-            File myFile = new File("../inputs/day2.txt");
+            File myFile = new File("./code/2022/inputs/day2.txt");
             Scanner myReader = new Scanner(myFile);
             
             while(myReader.hasNextLine()) {
-                // String data = myReader.nextLine();
                 myList.add(myReader.nextLine());
             }
             myReader.close();
