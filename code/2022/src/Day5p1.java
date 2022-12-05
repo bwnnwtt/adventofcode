@@ -12,15 +12,15 @@ public class Day5p1 {
         // the data structure that stores the file input line by line
         List<String> myList = new ArrayList<>();
 
-        try {
-            File myFile = new File("./code/2022/inputs/day5.txt");
-            Scanner myReader = new Scanner(myFile);
+        try (Scanner myReader = new Scanner(new File("./code/2022/inputs/day5.txt"))) {
+            // File myFile = new File("./code/2022/inputs/day5.txt");
+            // Scanner myReader = new Scanner(myFile);
             
             // read each line in the file and add into myList
             while(myReader.hasNextLine()) {
                 myList.add(myReader.nextLine());
             }
-            myReader.close();
+            // myReader.close();
         } catch (Exception ex) {
             System.out.println("An error occured");
             ex.printStackTrace();
@@ -52,7 +52,7 @@ public class Day5p1 {
             }
         }
 
-        // output the top of each crate
+        // output the top of each stack
         for(int i=0; i<myStacks.size(); i++) {
             System.out.println(myStacks.get(i).peek());
         }
