@@ -12,15 +12,14 @@ public class Day5p1 {
         // the data structure that stores the file input line by line
         List<String> myList = new ArrayList<>();
 
-        try (Scanner myReader = new Scanner(new File("./code/2022/inputs/day5.txt"))) {
-            // File myFile = new File("./code/2022/inputs/day5.txt");
-            // Scanner myReader = new Scanner(myFile);
-            
+        try (Scanner myReader = 
+                new Scanner(new File("./code/2022/inputs/day5.txt"))) {
+
             // read each line in the file and add into myList
             while(myReader.hasNextLine()) {
                 myList.add(myReader.nextLine());
             }
-            // myReader.close();
+
         } catch (Exception ex) {
             System.out.println("An error occured");
             ex.printStackTrace();
@@ -28,6 +27,7 @@ public class Day5p1 {
 
         // populate the list of stacks
         // i refers to the column number and j refers to the row number in each line of the file
+        // i terminal value and j start value is hardcoded based on my puzzle's input
         for(int i=1; i<35; i+=4) {
             Stack<Character> newStack = new Stack<>();
             for(int j=7; j>=0; j--) {
@@ -53,6 +53,7 @@ public class Day5p1 {
         }
 
         // output the top of each stack
+        // solution for my input is LBLVVTVLP
         for(int i=0; i<myStacks.size(); i++) {
             System.out.println(myStacks.get(i).peek());
         }
